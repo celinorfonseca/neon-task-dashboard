@@ -105,7 +105,7 @@ This repository is continuously updated as I learn and improve my frontend devel
 1. Clone the repository
 
 ```bash
-git clone YOUR_REPOSITORY_LINK
+https://github.com/celinorfonseca/neon-task-dashboard.git
 ```
 
 2. Open the project folder
