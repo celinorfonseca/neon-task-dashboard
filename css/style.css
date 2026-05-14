@@ -1,0 +1,126 @@
+
+body {
+    background: linear-gradient(
+        135deg,
+        #0f0f0f,
+        #1a0033,
+        #001f3f
+    );
+    min-height: 100vh;
+}
+
+#searchInput {
+    width: 300px;
+    padding: 12px;
+    border-radius: 1px;
+    border: none;
+    background: #1e1e1e;
+    color: white;
+    font-size: 16px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 12px;
+    padding: 20px;
+}
+
+.column {
+    background: #1a1a1a;
+  min-height: 500px;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  border: 1px solid #a855f7;
+  box-shadow: 
+  0 0 5px rgba(168, 85, 247, 0.5),
+  0 0 15px rgba(168, 85, 247, 0.3);
+}
+.card {
+
+position: relative;
+background: rgba(255,255,255,0.05);
+border-radius: 16px;
+padding: 20px;
+overflow: hidden;
+border: 1px solid rgba(255,255,255,0.1);
+box-shadow: 
+0 0 10px rgba(168,85,247,0.3),
+0 0 10px rgba(168,85,247,0.2);
+    
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+    0 0 20px rgba(168,85,247,0.5),
+    0 0 40px rgba(168,85,247,0.4);
+}
+.card::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.8s;
+}
+
+
+
+.card:hover::before {
+    left: 150%;
+}
+
+h2 {
+    color: #00ffff;
+
+    text-shadow:
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+}
+
+.date-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+input[type="date"] {
+    background: #2a2a2a;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.priority {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #a855f7;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #a855f7;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #a855f7;
+    }
+}
